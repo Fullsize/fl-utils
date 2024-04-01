@@ -2,18 +2,35 @@
   "name": "fl-utils",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./lib/index.umd.js",
+  "exports": {
+    ".": {
+      "require": "./lib/index.js",
+      "import": "./lib/index.umd.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Fullsize/fl-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Fullsize/fl-utils/issues",
+    "email": "1619686166@qq.com"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "build": "rollup -c rollup.config.mjs",
     "storybook:publish": "npm run build-storybook && touch ./storybook-static/.nojekyll"
   },
   "keywords": [],
-  "author": "",
+  "author": "@fullsize",
   "license": "ISC",
   "devDependencies": {
     "@chromatic-com/storybook": "^1.2.25",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@storybook/addon-essentials": "^8.0.5",
     "@storybook/addon-interactions": "^8.0.5",
     "@storybook/addon-links": "^8.0.5",
@@ -23,6 +40,8 @@
     "@storybook/react-vite": "^8.0.5",
     "@storybook/test": "^8.0.5",
     "prop-types": "^15.8.1",
-    "storybook": "^8.0.5"
+    "rollup": "^4.13.2",
+    "storybook": "^8.0.5",
+    "typescript": "^5.4.3"
   }
 }
