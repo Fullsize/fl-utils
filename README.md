@@ -3,5 +3,5 @@
 常用工具库整理
 
 ```shell
-npm i fl-utils
+npm i fullsize-utils
 ```
