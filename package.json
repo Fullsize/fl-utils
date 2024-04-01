@@ -1,5 +1,5 @@
 {
-  "name": "fl-utils",
+  "name": "fullsize-utils",
   "version": "1.0.0",
   "description": "",
   "main": "./lib/index.umd.js",
@@ -26,11 +26,12 @@
     "storybook": "npm run init && storybook dev -p 6006",
     "build-storybook": "npm run init && storybook build",
     "build": "npm run init && rollup -c rollup.config.mjs",
+    "npm:publish": "npm run build && npm publish",
     "storybook:publish": "npm run init && npm run build-storybook && touch ./storybook-static/.nojekyll"
   },
   "keywords": [],
   "author": "@fullsize",
-  "license": "ISC",
+  "license": "UNLICENSED",
   "devDependencies": {
     "@chromatic-com/storybook": "^1.2.25",
     "@rollup/plugin-terser": "^0.4.4",
