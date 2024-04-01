@@ -22,11 +22,11 @@
     "email": "1619686166@qq.com"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "build": "rollup -c rollup.config.mjs",
-    "storybook:publish": "npm run build-storybook && touch ./storybook-static/.nojekyll"
+    "init": "node writeIndex.js",
+    "storybook": "npm run init && storybook dev -p 6006",
+    "build-storybook": "npm run init && storybook build",
+    "build": "npm run init && rollup -c rollup.config.mjs",
+    "storybook:publish": "npm run init && npm run build-storybook && touch ./storybook-static/.nojekyll"
   },
   "keywords": [],
   "author": "@fullsize",

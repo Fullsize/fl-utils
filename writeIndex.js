@@ -32,9 +32,8 @@ try {
 
 // 检查现有的内容中是否已经包含了新的导出语句，如果没有则添加到现有内容后面
 const newContent = exportStatements.filter(exportStatement => !existingContent.includes(exportStatement)).join('\n');
-const updatedContent = existingContent + (existingContent ? '\n' : '') + newContent;
 
 // 将更新后的内容写入到 index.ts 文件中
-fs.writeFileSync(indexPath, updatedContent);
+fs.writeFileSync(indexPath, existingContent + newContent);
 
 console.log('导出语句已写入到 index.ts 文件中。');
