@@ -39,9 +39,16 @@
     "@storybook/react": "^8.0.5",
     "@storybook/react-vite": "^8.0.5",
     "@storybook/test": "^8.0.5",
+    "@types/qs": "^6.9.14",
     "prop-types": "^15.8.1",
     "rollup": "^4.13.2",
     "storybook": "^8.0.5",
     "typescript": "^5.4.3"
+  },
+  "peerDependencies": {
+    "qs": "*"
+  },
+  "dependencies": {
+    "qs": "^6.12.0"
   }
 }

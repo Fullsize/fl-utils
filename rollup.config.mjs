@@ -9,12 +9,18 @@ export default {
       file: './lib/index.js', // 输出文件路径
       format: 'es', // 输出模块格式为 CommonJS
       sourcemap: false, // 生成 source map
+      globals: {
+        qs: 'qs'
+      }
     },
     {
       name: 'fl-utils',
       file: './lib/index.umd.js', // 输出文件路径
       format: 'umd', // 输出模块格式为 CommonJS
       sourcemap: false, // 生成 source map
+      globals: {
+        qs: 'qs'
+      }
     }
   ],
   plugins: [
