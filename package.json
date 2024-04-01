@@ -1,5 +1,5 @@
 {
-  "name": "fullsize-utils",
+  "name": "@fullsize/utils",
   "version": "1.0.0",
   "description": "",
   "main": "./lib/index.umd.js",
