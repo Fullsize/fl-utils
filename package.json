@@ -1,6 +1,6 @@
 {
   "name": "@fullsize/utils",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "",
   "main": "./lib/index.umd.js",
   "exports": {
@@ -26,7 +26,7 @@
     "storybook": "npm run init && storybook dev -p 6006",
     "build-storybook": "npm run init && storybook build",
     "build": "npm run init && rollup -c rollup.config.mjs",
-    "npm:publish": "npm run build && npm publish",
+    "npm:publish": "npm run build && node updateVersion.js && npm publish",
     "storybook:publish": "npm run init && npm run build-storybook && touch ./storybook-static/.nojekyll"
   },
   "keywords": [],
