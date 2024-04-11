@@ -27,5 +27,5 @@ export default {
     typescript(), // 使用 Rollup 插件处理 TypeScript
     terser()
   ],
-  external: ['react'], // 将 react 设置为外部依赖，不会打包到最终文件中
+  external: ['react', 'qs'], // 将 react 设置为外部依赖，不会打包到最终文件中
 };

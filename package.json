@@ -1,6 +1,6 @@
 {
   "name": "@fullsize/utils",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "",
   "main": "./lib/index.umd.js",
   "exports": {
@@ -49,11 +49,5 @@
     "rollup": "^4.13.2",
     "storybook": "^8.0.5",
     "typescript": "^5.4.3"
-  },
-  "peerDependencies": {
-    "qs": "*"
-  },
-  "dependencies": {
-    "qs": "^6.12.0"
   }
 }

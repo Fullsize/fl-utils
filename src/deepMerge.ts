@@ -4,7 +4,10 @@
  * @param {...Object} sources 要合并的多个源对象
  * @returns {Object} 合并后的目标对象
  */
-export default function deepMerge(target: { [x: string]: any; }, ...sources: any[]) {
+export default function deepMerge(target: { [x: string]: any }, ...sources: any[]): { [x: string]: any } {
+  // 创建一个新的空对象作为目标对象的副本
+  const mergedObj = { ...target };
+
   // 遍历所有源对象
   for (const source of sources) {
     // 检查源对象是否是对象类型且不为null
@@ -19,18 +22,18 @@ export default function deepMerge(target: { [x: string]: any; }, ...sources: any
         // 如果当前值是对象且不为null，则递归合并
         if (typeof source[key] === 'object' && source[key] !== null) {
           // 如果目标对象中没有当前键，则创建一个空对象
-          if (!target[key]) {
-            Object.assign(target, { [key]: {} });
+          if (!mergedObj[key]) {
+            mergedObj[key] = {};
           }
           // 递归合并对象
-          deepMerge(target[key], source[key]);
+          mergedObj[key] = deepMerge(mergedObj[key], source[key]);
         } else {
           // 否则直接赋值给目标对象的当前键
-          Object.assign(target, { [key]: source[key] });
+          mergedObj[key] = source[key];
         }
       }
     }
   }
 
-  return target;
+  return mergedObj;
 }
