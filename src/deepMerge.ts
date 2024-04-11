@@ -4,7 +4,7 @@
  * @param {...Object} sources 要合并的多个源对象
  * @returns {Object} 合并后的目标对象
  */
-function deepMerge(target: { [x: string]: any; }, ...sources: any[]) {
+export default function deepMerge(target: { [x: string]: any; }, ...sources: any[]) {
   // 遍历所有源对象
   for (const source of sources) {
     // 检查源对象是否是对象类型且不为null

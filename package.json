@@ -1,12 +1,12 @@
 {
   "name": "@fullsize/utils",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "./lib/index.umd.js",
   "exports": {
     ".": {
-      "require": "./lib/index.js",
-      "import": "./lib/index.umd.js"
+      "import": "./lib/index.js",
+      "require": "./lib/index.umd.js"
     }
   },
   "files": [
@@ -15,7 +15,7 @@
   "types": "./lib/type/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Fullsize/fl-utils.git"
+    "url": "git+https://github.com/Fullsize/fl-utils.git"
   },
   "bugs": {
     "url": "https://github.com/Fullsize/fl-utils/issues",

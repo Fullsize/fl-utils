@@ -5,4 +5,4 @@ export { default as getQuery } from './getQuery';
 export { default as getScale } from './getScale';
 export { default as removeQueryParams } from './removeQueryParams';
 export { default as deconstruction } from './deconstruction';
-export { default as isEqual } from './isEqual';export { default as generateUUID } from './generateUUID';export { default as curry } from './curry';
+export { default as isEqual } from './isEqual';export { default as generateUUID } from './generateUUID';export { default as curry } from './curry';export { default as deepMerge } from './deepMerge';
