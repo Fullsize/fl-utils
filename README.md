@@ -1,7 +1,5 @@
 # fl-utils
-
-常用工具库整理
-
+A JavaScript Utility Library
 ```shell
 npm i @fullsize/utils
 ```
