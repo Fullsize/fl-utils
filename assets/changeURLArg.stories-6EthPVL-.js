@@ -1,0 +1,5 @@
+import{R as o,r as h}from"./index-BBkUAzwr.js";import{S as w}from"./ShowDocs-BXFGbuDt.js";function E(e,t,s){if(!e||!t)return s||window.location.href;const r=s||window.location.href,l=new RegExp(`${e}=([^&]*)`),a=`${e}=${t}`;return r.match(l)?r.replace(l,a):r.includes("?")?`${r}&${a}`:`${r}?${a}`}const f=()=>(h.useEffect(()=>{const e=window.location.href,t=E("page","2",e);console.log(t)},[]),o.createElement(o.Fragment,null,o.createElement("h2",null,"看console.log输出"))),D={title:"base/changeURLArg",component:f},n={render:()=>o.createElement(w,{md:"doc/changeURLArg.md"})},c={render:()=>o.createElement(f,null)};var m,d,p;n.parameters={...n.parameters,docs:{...(m=n.parameters)==null?void 0:m.docs,source:{originalSource:`{
+  render: () => <ShowDocs md={"doc/changeURLArg.md"} />
+}`,...(p=(d=n.parameters)==null?void 0:d.docs)==null?void 0:p.source}}};var u,i,g;c.parameters={...c.parameters,docs:{...(u=c.parameters)==null?void 0:u.docs,source:{originalSource:`{
+  render: () => <Page />
+}`,...(g=(i=c.parameters)==null?void 0:i.docs)==null?void 0:g.source}}};const U=["Doc","Demo"];export{c as Demo,n as Doc,U as __namedExportsOrder,D as default};

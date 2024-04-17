@@ -1,5 +1,3 @@
-# asyncPool 方法使用文档
-
 ## 方法名称
 
 asyncPool
@@ -22,7 +20,7 @@ asyncPool
 
 ```javascript
 // 导入 asyncPool 方法
-import asyncPool from "@fullsize/utils";
+import { asyncPool } from "@fullsize/utils";
 
 // 模拟异步任务函数
 function asyncTask(item) {

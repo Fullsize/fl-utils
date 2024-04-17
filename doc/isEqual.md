@@ -1,5 +1,3 @@
-# isEqual 方法说明文档
-
 ## 方法名称
 
 isEqual
