@@ -11,13 +11,13 @@ export default {
   input: './src/index.ts', // 入口文件路径
   output: [
     {
-      name: 'fl-utils',
+      name: '@fullsize/utils',
       file: './lib/index.js', // 输出文件路径
       format: 'es', // 输出模块格式为 CommonJS
       ...outputOption
     },
     {
-      name: 'fl-utils',
+      name: '@fullsize/utils',
       file: './lib/index.umd.js', // 输出文件路径
       format: 'umd', // 输出模块格式为 CommonJS
       ...outputOption
