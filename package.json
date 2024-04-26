@@ -27,7 +27,8 @@
     "build-storybook": "npm run init && storybook build",
     "build": "npm run init && rollup -c rollup.config.mjs",
     "npm:publish": "npm run build && node updateVersion.js && npm publish",
-    "storybook:publish": "npm run init && npm run build-storybook && touch ./storybook-static/.nojekyll"
+    "storybook:publish": "npm run init && npm run build-storybook && touch ./storybook-static/.nojekyll",
+    "release": "semantic-release"
   },
   "keywords": [],
   "author": "@fullsize",
@@ -36,6 +37,7 @@
     "@chromatic-com/storybook": "^1.2.25",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.6",
+    "@semantic-release/changelog": "^6.0.3",
     "@storybook/addon-essentials": "^8.0.5",
     "@storybook/addon-interactions": "^8.0.5",
     "@storybook/addon-links": "^8.0.5",
@@ -49,6 +51,7 @@
     "react": "^18.2.0",
     "react-markdown": "^9.0.1",
     "rollup": "^4.13.2",
+    "semantic-release": "^23.0.8",
     "storybook": "^8.0.5",
     "typescript": "^5.4.3"
   }
