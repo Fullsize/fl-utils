@@ -1,0 +1,5 @@
+import{R as r,r as E}from"./index-BBhmMsIz.js";import{S as y}from"./ShowDocs-1W6sppJQ.js";function D(o){return function t(...e){return e.length>=o.length?o.apply(this,e):function(...s){return t.apply(this,e.concat(s))}}}const i=()=>(E.useEffect(()=>{function o(f,g,h){return f+g+h}const t=D(o),e=t(1)(2)(3);console.log(e);const s=t(1,2)(3);console.log(s)},[]),r.createElement(r.Fragment,null,r.createElement("h2",null,"看console.log输出"))),w={title:"base/curry",component:i},c={render:()=>r.createElement(y,{md:"doc/curry.md"})},n={render:()=>r.createElement(i,null)};var a,u,m;c.parameters={...c.parameters,docs:{...(a=c.parameters)==null?void 0:a.docs,source:{originalSource:`{
+  render: () => <ShowDocs md={"doc/curry.md"} />
+}`,...(m=(u=c.parameters)==null?void 0:u.docs)==null?void 0:m.source}}};var l,d,p;n.parameters={...n.parameters,docs:{...(l=n.parameters)==null?void 0:l.docs,source:{originalSource:`{
+  render: () => <Page />
+}`,...(p=(d=n.parameters)==null?void 0:d.docs)==null?void 0:p.source}}};const P=["Doc","Demo"];export{n as Demo,c as Doc,P as __namedExportsOrder,w as default};
