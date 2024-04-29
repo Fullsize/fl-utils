@@ -10,3 +10,5 @@ export { default as getQuery } from './getQuery';
 export { default as getScale } from './getScale';
 export { default as isEqual } from './isEqual';
 export { default as removeQueryParams } from './removeQueryParams';
+export { default as memo } from './memo';
+export * from './math';

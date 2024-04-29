@@ -22,7 +22,7 @@
     "email": "1619686166@qq.com"
   },
   "scripts": {
-    "init": "node writeIndex.js",
+    "init": "",
     "storybook": "npm run init && storybook dev -p 6006",
     "build-storybook": "npm run init && storybook build",
     "build": "npm run init && rollup -c rollup.config.mjs",
