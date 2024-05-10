@@ -13,3 +13,10 @@ export { default as removeQueryParams } from './removeQueryParams';
 export { default as memo } from './memo';
 export { default as add } from './math/add';
 export { default as ceil } from './math/ceil'
+export { default as isArray } from './isArray'
+export { default as isEmpty } from './isEmpty'
+export { default as isFunction } from './isFunction'
+export { default as isNuil } from './isNuil'
+export { default as isNull } from './isNull'
+export { default as isObject } from './isObject'
+export { default as isSymbol } from './isSymbol'
