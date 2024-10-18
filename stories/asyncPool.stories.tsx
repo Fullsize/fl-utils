@@ -1,39 +1,49 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import { asyncPool } from "../src";
 import ShowDocs from "./utl/ShowDocs";
 const Page = () => {
-  useEffect(() => {
-    // 模拟异步任务函数
-    function asyncTask(item) {
+  const [results, setResults] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const handleStart = async () => {
+    setLoading(true);
+
+    // Simulated tasks (e.g., fetching data from an API).
+    const tasks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    const iteratorFn = async (task) => {
+      // Simulate a network request with a delay.
       return new Promise((resolve) => {
         setTimeout(() => {
-          console.log(`Task ${item} completed`);
-          resolve(item);
-        }, 1000); // 模拟任务执行时间 1 秒
+          resolve(`Task ${task} completed`);
+        }, 1000 * Math.random()); // Random delay between 0 and 1 second.
       });
+    };
+
+    try {
+      // Using asyncPool with a pool limit of 3.
+      const results = await asyncPool(3, tasks, iteratorFn);
+      setResults(results);
+    } catch (error) {
+      console.error("Error in asyncPool:", error);
     }
 
-    // 可迭代的任务列表
-    const tasks = [1, 2, 3, 4, 5];
+    setLoading(false);
+  };
 
-    // 定义迭代器函数
-    async function iteratorFn(item) {
-      return asyncTask(item);
-    }
-
-    // 使用 asyncPool 控制并发数为 2
-    async function runTasks() {
-      const result = await asyncPool(2, tasks, iteratorFn);
-      console.log("All tasks completed:", result);
-    }
-
-    runTasks();
-  }, []);
   return (
-    <>
-      <h2>看console.log输出</h2>
-    </>
+    <div>
+      <h2>Async Pool Example</h2>
+      <button onClick={handleStart} disabled={loading}>
+        {loading ? "Processing..." : "Start Tasks"}
+      </button>
+      <ul>
+        {results.map((result, index) => (
+          <li key={index}>{result}</li>
+        ))}
+      </ul>
+    </div>
   );
 };
 const meta: Meta<typeof asyncPool> = {

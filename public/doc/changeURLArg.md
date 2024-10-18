@@ -22,12 +22,41 @@ changeURLArg
 ```javascript
 // 导入 changeURLArg 方法
 import { changeURLArg } from "@fullsize/utils";
+const Page = () => {
+  const [paramName, setParamName] = useState("");
+  const [paramValue, setParamValue] = useState("");
+  const [updatedUrl, setUpdatedUrl] = useState(window.location.href);
 
-// 当前URL为 https://example.com?page=1&limit=10
-const oldUrl = window.location.href;
+  const handleChangeUrl = () => {
+    const newUrl = changeURLArg(paramName, paramValue);
+    setUpdatedUrl(newUrl);
+  };
 
-// 将参数 page 的值更改为 2
-const newUrl = changeURLArg("page", "2", oldUrl);
-console.log(newUrl);
-// Output: https://example.com?page=2&limit=10
+  return (
+    <div style={{ padding: "20px" }}>
+      <h2>Change URL Parameter</h2>
+      <div>
+        <input
+          type="text"
+          placeholder="Parameter Name"
+          value={paramName}
+          onChange={(e) => setParamName(e.target.value)}
+          style={{ marginRight: "10px" }}
+        />
+        <input
+          type="text"
+          placeholder="Parameter Value"
+          value={paramValue}
+          onChange={(e) => setParamValue(e.target.value)}
+          style={{ marginRight: "10px" }}
+        />
+        <button onClick={handleChangeUrl}>Change URL</button>
+      </div>
+      <div style={{ marginTop: "20px" }}>
+        <h3>Updated URL:</h3>
+        <p>{updatedUrl}</p>
+      </div>
+    </div>
+  );
+};
 ```
