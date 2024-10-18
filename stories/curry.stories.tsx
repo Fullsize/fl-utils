@@ -1,30 +1,64 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { curry } from "../src";
 import ShowDocs from "./utl/ShowDocs";
 import Markdown from "react-markdown";
+function multiply(a: number, b: number, c: number): number {
+  return a * b * c;
+}
+
+const curriedMultiply = curry(multiply);
 const Page = () => {
-  useEffect(() => {
-    // 示例函数
-    function sum(a: number, b: number, c: number) {
-      return a + b + c;
+  const [a, setA] = useState<string>("");
+  const [b, setB] = useState<string>("");
+  const [c, setC] = useState<string>("");
+  const [result, setResult] = useState<number | null>(null);
+
+  const handleCalculate = () => {
+    // Convert inputs to numbers
+    const numA = parseFloat(a);
+    const numB = parseFloat(b);
+    const numC = parseFloat(c);
+
+    // Use the curried function
+    if (!isNaN(numA) && !isNaN(numB) && !isNaN(numC)) {
+      const calculatedResult = curriedMultiply(numA)(numB)(numC);
+      setResult(calculatedResult);
     }
+  };
 
-    // 对 sum 函数进行柯里化
-    const curriedSum = curry(sum);
-
-    // 调用柯里化后的函数
-    const result1 = curriedSum(1)(2)(3);
-    console.log(result1); // Output: 6
-
-    // 也可以一次性传入多个参数
-    const result2 = curriedSum(1, 2)(3);
-    console.log(result2); // Output: 6
-  }, []);
   return (
-    <>
-      <h2>看console.log输出</h2>
-    </>
+    <div style={{ padding: "20px" }}>
+      <h2>Curried Multiply Example</h2>
+      <div>
+        <input
+          type="text"
+          placeholder="Enter first number"
+          value={a}
+          onChange={(e) => setA(e.target.value)}
+          style={{ marginRight: "10px" }}
+        />
+        <input
+          type="text"
+          placeholder="Enter second number"
+          value={b}
+          onChange={(e) => setB(e.target.value)}
+          style={{ marginRight: "10px" }}
+        />
+        <input
+          type="text"
+          placeholder="Enter third number"
+          value={c}
+          onChange={(e) => setC(e.target.value)}
+          style={{ marginRight: "10px" }}
+        />
+        <button onClick={handleCalculate}>Calculate</button>
+      </div>
+      <div style={{ marginTop: "20px" }}>
+        <h3>Result:</h3>
+        <p>{result !== null ? result : "Enter values to calculate"}</p>
+      </div>
+    </div>
   );
 };
 const meta: Meta<typeof curry> = {
