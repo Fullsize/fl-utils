@@ -1,5 +1,0 @@
-import{R as r,r as h}from"./index-uubelm5h.js";import{S as w}from"./ShowDocs-C8Uchmte.js";function E(o,c,f){const e=f||window.location.href,s=new RegExp(`${o}=([^&]*)`),a=`${o}=${c}`;return e.match(s)?e.replace(s,a):e.includes("?")?`${e}&${a}`:`${e}?${a}`}const i=()=>(h.useEffect(()=>{const o=window.location.href,c=E("page","2",o);console.log(c)},[]),r.createElement(r.Fragment,null,r.createElement("h2",null,"看console.log输出"))),D={title:"base/changeURLArg",component:i},t={render:()=>r.createElement(w,{md:"doc/changeURLArg.md"})},n={render:()=>r.createElement(i,null)};var l,m,d;t.parameters={...t.parameters,docs:{...(l=t.parameters)==null?void 0:l.docs,source:{originalSource:`{
-  render: () => <ShowDocs md={"doc/changeURLArg.md"} />
-}`,...(d=(m=t.parameters)==null?void 0:m.docs)==null?void 0:d.source}}};var p,u,g;n.parameters={...n.parameters,docs:{...(p=n.parameters)==null?void 0:p.docs,source:{originalSource:`{
-  render: () => <Page />
-}`,...(g=(u=n.parameters)==null?void 0:u.docs)==null?void 0:g.source}}};const U=["Doc","Demo"];export{n as Demo,t as Doc,U as __namedExportsOrder,D as default};
