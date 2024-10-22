@@ -2,56 +2,28 @@
 
 downloadFile
 
+## 函数声明
+
+```typescript
+function downloadFile(url: string, filename: string): void;
+```
+
 ## 描述
 
-下载文件到本地。
+该函数用于通过 XMLHttpRequest (XHR) 请求从给定的 URL 下载文件，并将其保存为指定的文件名。文件数据以 Blob 的形式接收并处理。
 
 ## 参数
 
-- `url` 文件的下载链接。
-- `filename` 下载后保存的文件名。
+- `url: string`: 文件下载的 URL 地址。
+- `filename: string`: 下载时保存的文件名。
 
 ## 返回值
 
-本地文件
+- `void`: 该函数没有返回值，但它会启动文件的下载过程。
 
 ## 使用示例
 
-```javascript
-// 导入 downloadFile 方法
-import { downloadFile } from "@fullsize/utils";
-
-const App: React.FC = () => {
-  const [fileUrl, setFileUrl] = useState<string>(
-    "https://mozilla.github.io/pdf.js/web/compressed.tracemonkey-pldi-09.pdf"
-  );
-  const [filename, setFilename] = useState<string>("sample.pdf");
-
-  const handleDownload = () => {
-    downloadFile(fileUrl, filename);
-  };
-
-  return (
-    <div style={{ padding: "20px" }}>
-      <h2>File Download Example</h2>
-      <div>
-        <input
-          type="text"
-          placeholder="Enter file URL"
-          value={fileUrl}
-          onChange={(e) => setFileUrl(e.target.value)}
-          style={{ width: "100%", marginBottom: "10px" }}
-        />
-        <input
-          type="text"
-          placeholder="Enter filename"
-          value={filename}
-          onChange={(e) => setFilename(e.target.value)}
-          style={{ width: "100%", marginBottom: "10px" }}
-        />
-        <button onClick={handleDownload}>Download File</button>
-      </div>
-    </div>
-  );
-};
+```typescript
+// 下载文件
+downloadFile("https://example.com/file.pdf", "downloaded-file.pdf");
 ```

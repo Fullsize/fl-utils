@@ -2,70 +2,67 @@
 
 deepMerge
 
+## 函数声明
+
+```typescript
+function deepMerge(
+  target: { [x: string]: any },
+  ...sources: any[]
+): { [x: string]: any };
+```
+
 ## 描述
 
-深层次合并多个对象到目标对象中
+该函数用于深度合并多个对象。与浅合并不同，该函数会递归地合并对象中的嵌套属性，并处理目标对象中不存在的属性。通过多层次合并，函数确保每个层级的数据都被保留。
 
 ## 参数
 
-- `target` 目标对象，合并结果将存储在该对象中
-- `sources` 要合并的多个源对象
+- `target: { [x: string]: any }`: 必须的初始目标对象。函数会将源对象中的值合并到该目标对象中。
+- `...sources: any[]`: 需要合并到目标对象的一个或多个源对象。这些对象会依次合并到目标对象中。
 
 ## 返回值
 
-合并后的目标对象
+- `{ [x: string]: any }`: 返回合并后的目标对象。目标对象的属性值来自所有源对象的深度合并，源对象的值会覆盖目标对象中的相应值。
 
 ## 使用示例
 
-```javascript
-// 导入 deepMerge 方法
-import { deepMerge } from "@fullsize/utils";
-
-const App: React.FC = () => {
-  const [object1, setObject1] = useState<string>(
-    '{"a": 1, "b": {"x": 10, "y": 20}}'
-  );
-  const [object2, setObject2] = useState<string>(
-    '{"b": {"y": 30, "z": 40}, "c": 3}'
-  );
-  const [mergedObject, setMergedObject] = useState<any>({});
-
-  const handleMerge = () => {
-    try {
-      const obj1 = JSON.parse(object1);
-      const obj2 = JSON.parse(object2);
-      const result = deepMerge(obj1, obj2);
-      setMergedObject(result);
-    } catch (error) {
-      alert("Invalid JSON input. Please enter valid JSON objects.");
-    }
-  };
-
-  return (
-    <div style={{ padding: "20px" }}>
-      <h2>Deep Merge Example</h2>
-      <div>
-        <textarea
-          rows={5}
-          style={{ width: "100%", marginBottom: "10px" }}
-          placeholder="Enter first JSON object"
-          value={object1}
-          onChange={(e) => setObject1(e.target.value)}
-        />
-        <textarea
-          rows={5}
-          style={{ width: "100%", marginBottom: "10px" }}
-          placeholder="Enter second JSON object"
-          value={object2}
-          onChange={(e) => setObject2(e.target.value)}
-        />
-        <button onClick={handleMerge}>Merge Objects</button>
-      </div>
-      <div style={{ marginTop: "20px" }}>
-        <h3>Merged Object:</h3>
-        <pre>{JSON.stringify(mergedObject, null, 2)}</pre>
-      </div>
-    </div>
-  );
+```typescript
+const obj1 = {
+  name: "John",
+  age: 30,
+  address: {
+    city: "New York",
+    zip: "10001",
+  },
 };
+
+const obj2 = {
+  age: 40,
+  address: {
+    zip: "90001",
+    state: "California",
+  },
+};
+
+const obj3 = {
+  hobbies: ["reading", "traveling"],
+};
+
+// 深度合并 obj1, obj2 和 obj3
+const merged = deepMerge(obj1, obj2, obj3);
+
+console.log(merged);
+/*
+输出:
+{
+  name: 'John',
+  age: 40,
+  address: {
+    city: 'New York',
+    zip: '90001',
+    state: 'California'
+  },
+  hobbies: ['reading', 'traveling']
+}
+*/
 ```

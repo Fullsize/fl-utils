@@ -1,0 +1,5 @@
+import{R as r}from"./index-RYns6xqu.js";import{a as p,i as d}from"./isArray-nCS7zLbG.js";import{S as u}from"./ShowDocs-DJ69lLYk.js";import"./jsx-runtime-DEdD30eg.js";function E(e){return p(e)?!0:d(e)||f(e)?!Object.keys(e).length:!1}function f(e){return typeof e=="object"}const y=()=>{const e={};return r.createElement("div",null,E(e)?r.createElement("p",null,"No data available."):r.createElement("div",null,r.createElement("h2",null,"Data:"),r.createElement("pre",null,JSON.stringify(e,null,2))))},l=y,h={title:"base/isEmpty",component:l},t={render:()=>r.createElement(u,{md:"doc/isEmpty.md"})},o={render:()=>r.createElement(l,null)};var a,n,s;t.parameters={...t.parameters,docs:{...(a=t.parameters)==null?void 0:a.docs,source:{originalSource:`{
+  render: () => <ShowDocs md={"doc/isEmpty.md"} />
+}`,...(s=(n=t.parameters)==null?void 0:n.docs)==null?void 0:s.source}}};var c,m,i;o.parameters={...o.parameters,docs:{...(c=o.parameters)==null?void 0:c.docs,source:{originalSource:`{
+  render: () => <Page />
+}`,...(i=(m=o.parameters)==null?void 0:m.docs)==null?void 0:i.source}}};const O=["Doc","Demo"];export{o as Demo,t as Doc,O as __namedExportsOrder,h as default};
