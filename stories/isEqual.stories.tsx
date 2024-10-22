@@ -1,35 +1,44 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { isEqual } from "../src";
 import ShowDocs from "./utl/ShowDocs";
-const Page = () => {
-  useEffect(() => {
-    // 示例对象
-    const obj1 = {
-      name: "Alice",
-      age: 30,
-      address: { city: "New York", zip: 10001 },
-    };
-    const obj2 = {
-      name: "Alice",
-      age: 30,
-      address: { city: "New York", zip: 10001 },
-    };
-    const obj3 = { name: "Bob", age: 25 };
+const App = () => {
+  const [obj1, setObj1] = useState({ name: "Alice", age: 25 });
+  const [obj2, setObj2] = useState({ name: "Alice", age: 25 });
+  const [areEqual, setAreEqual] = useState(false);
 
-    // 比较两个对象
-    const result1 = isEqual(obj1, obj2); // true，obj1 和 obj2 的内容相等
-    const result2 = isEqual(obj1, obj3); // false，obj1 和 obj3 的内容不相等
+  const compareObjects = () => {
+    setAreEqual(isEqual(obj1, obj2));
+  };
 
-    console.log(result1); // 输出 true
-    console.log(result2); // 输出 false
-  }, []);
   return (
-    <>
-      <h2>看console.log输出</h2>
-    </>
+    <div>
+      <h1>Object Comparison in React</h1>
+
+      <div>
+        <h3>Object 1:</h3>
+        <pre>{JSON.stringify(obj1, null, 2)}</pre>
+      </div>
+
+      <div>
+        <h3>Object 2:</h3>
+        <pre>{JSON.stringify(obj2, null, 2)}</pre>
+      </div>
+
+      <button onClick={compareObjects}>Compare Objects</button>
+
+      <h2>{areEqual ? "Objects are equal" : "Objects are not equal"}</h2>
+
+      <button onClick={() => setObj1({ name: "Alice", age: 25 })}>
+        Set Obj1 to Alice
+      </button>
+      <button onClick={() => setObj2({ name: "Bob", age: 30 })}>
+        Set Obj2 to Bob
+      </button>
+    </div>
   );
 };
+const Page = App;
 const meta: Meta<typeof isEqual> = {
   title: "base/isEqual",
   component: Page,
