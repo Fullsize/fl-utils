@@ -20,7 +20,7 @@ const App = () => {
 
 const Page = App;
 const meta: Meta<typeof isEmpty> = {
-  title: "base/isEmpty",
+  title: "is/isEmpty",
   component: Page,
 };
 

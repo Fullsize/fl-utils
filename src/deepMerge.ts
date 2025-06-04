@@ -1,39 +1,60 @@
 /**
- * 深层次合并多个对象到目标对象中
- * @param {Object} target 目标对象，合并结果将存储在该对象中
- * @param {...Object} sources 要合并的多个源对象
- * @returns {Object} 合并后的目标对象
+ * 深度克隆一个对象
+ * 该函数通过递归的方式创建一个对象的深拷贝版本，处理包括循环引用、日期、正则、Map、Set以及普通对象和数组
+ * 
+ * @param obj {T} - 需要克隆的对象
+ * @param hash - 用于处理循环引用的WeakMap，默认为空
+ * @returns  - 克隆后的对象
  */
-export default function deepMerge(target: { [x: string]: any }, ...sources: any[]): { [x: string]: any } {
-  // 创建一个新的空对象作为目标对象的副本
-  const mergedObj = { ...target };
+export default function deepClone<T>(obj: T, hash = new WeakMap()): T {
+  if (typeof obj !== 'object' || obj === null) {
+    return obj;
+  }
 
-  // 遍历所有源对象
-  for (const source of sources) {
-    // 检查源对象是否是对象类型且不为null
-    if (typeof source !== 'object' || source === null) {
-      continue; // 如果不是对象或为null，则跳过当前源对象
-    }
+  // 处理循环引用
+  if (hash.has(obj)) {
+    return hash.get(obj);
+  }
 
-    // 遍历源对象的所有键
-    for (const key in source) {
-      // 检查当前键是否是源对象自身的属性（不包括原型链上的属性）
-      if (Object.prototype.hasOwnProperty.call(source, key)) {
-        // 如果当前值是对象且不为null，则递归合并
-        if (typeof source[key] === 'object' && source[key] !== null) {
-          // 如果目标对象中没有当前键，则创建一个空对象
-          if (!mergedObj[key]) {
-            mergedObj[key] = {};
-          }
-          // 递归合并对象
-          mergedObj[key] = deepMerge(mergedObj[key], source[key]);
-        } else {
-          // 否则直接赋值给目标对象的当前键
-          mergedObj[key] = source[key];
-        }
-      }
+  // 处理 Date
+  if (obj instanceof Date) {
+    return new Date(obj.getTime()) as any;
+  }
+
+  // 处理 RegExp
+  if (obj instanceof RegExp) {
+    return new RegExp(obj.source, obj.flags) as any;
+  }
+
+  // 处理 Map
+  if (obj instanceof Map) {
+    const result = new Map();
+    hash.set(obj, result);
+    obj.forEach((value, key) => {
+      result.set(key, deepClone(value, hash));
+    });
+    return result as any;
+  }
+
+  // 处理 Set
+  if (obj instanceof Set) {
+    const result = new Set();
+    hash.set(obj, result);
+    obj.forEach((value) => {
+      result.add(deepClone(value, hash));
+    });
+    return result as any;
+  }
+
+  // 处理 Array 或普通对象
+  const result = Array.isArray(obj) ? [] : {};
+  hash.set(obj, result);
+
+  for (const key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      (result as any)[key] = deepClone((obj as any)[key], hash);
     }
   }
 
-  return mergedObj;
+  return result as T;
 }

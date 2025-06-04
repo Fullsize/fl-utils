@@ -40,7 +40,7 @@ const App = () => {
 };
 const Page = App;
 const meta: Meta<typeof isEqual> = {
-  title: "base/isEqual",
+  title: "is/isEqual",
   component: Page,
 };
 

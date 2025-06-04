@@ -33,7 +33,7 @@ const App = () => {
 
 const Page = App;
 const meta: Meta<typeof isArray> = {
-  title: "base/isArray",
+  title: "is/isArray",
   component: Page,
 };
 
