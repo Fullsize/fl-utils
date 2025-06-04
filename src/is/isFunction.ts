@@ -1,4 +1,4 @@
-import isNuil from './isNuil'
+import { isNuil } from '../index';
 /**
  * 检查一个对象是否为函数。
  * @param obj 未知类型的对象，需要被检查是否为函数。
