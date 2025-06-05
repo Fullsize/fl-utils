@@ -3,6 +3,7 @@ export { default as changeURLArg } from './changeURLArg';
 export { default as curry } from './curry';
 export { default as deconstruction } from './deconstruction';
 export { default as deepMerge } from './deepMerge';
+export { default as deepClone } from './deepClone';
 export { default as downloadFile } from './downloadFile';
 export { default as downloadFileAsStream } from './downloadFileAsStream';
 export { default as createUUID } from './generateUUID';
@@ -18,8 +19,8 @@ export { default as isEmpty } from './is/isEmpty'
 export { default as isFunction } from './is/isFunction'
 export { default as isNuil } from './is/isNuil'
 export { default as isNull } from './is/isNull'
-export { default as isObject } from './isObject'
-export { default as isSymbol } from './isSymbol'
+export { default as isObject } from './is/isObject'
+export { default as isSymbol } from './is/isSymbol'
 export { default as chuck } from './array/chuck'
 export { default as tryCatch } from './tryCatch'
 export { default as shuffle } from './array/shuffle'
