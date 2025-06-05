@@ -58,6 +58,7 @@
   },
   "dependencies": {
     "prismjs": "^1.29.0",
+    "react-dom": "18.2.0",
     "react-syntax-highlighter": "^15.6.1"
   },
   "packageManager": "pnpm@8.6.6"

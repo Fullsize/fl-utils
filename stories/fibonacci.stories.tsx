@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import React, { useState } from "react";
-import { fibonacci } from "../src";
+import { fibonacci, tryCatch } from "../src";
 import ShowDocs from "./utl/ShowDocs";
 
 const FibonacciDemo = () => {
