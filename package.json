@@ -24,7 +24,7 @@
   },
   "scripts": {
     "init": "",
-    "storybook": "npm run init && storybook dev -p 6006",
+    "dev": "npm run init && storybook dev -p 6006",
     "build-storybook": "npm run init && storybook build",
     "build": "npm run init && rollup -c rollup.config.mjs",
     "npm:publish": "npm run build && node updateVersion.js && npm publish",
@@ -58,6 +58,8 @@
   },
   "dependencies": {
     "prismjs": "^1.29.0",
+    "react-dom": "18.2.0",
     "react-syntax-highlighter": "^15.6.1"
-  }
+  },
+  "packageManager": "pnpm@8.6.6"
 }

@@ -1,4 +1,4 @@
-import { isNuil, isArray, isObject } from './index';
+import { isNuil, isArray, isObject } from '../index';
 /**
  * 检查给定的值是否为空。
  * @param value 任意类型的值，将被检查是否为空。

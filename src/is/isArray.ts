@@ -1,4 +1,4 @@
-import isNuil from './isNuil'
+import { isNuil } from '../index';
 /**
  * 判断传入的对象是否为数组。
  * @param obj 任意类型的对象，需要判断是否为数组。
