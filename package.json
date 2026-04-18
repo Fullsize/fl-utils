@@ -28,7 +28,7 @@
     "build-storybook": "npm run init && storybook build",
     "build": "npm run init && rollup -c rollup.config.mjs",
     "npm:publish": "npm run build && node updateVersion.js && npm publish",
-    "storybook:publish": "npm run init && npm run build-storybook && touch ./storybook-static/.nojekyll",
+    "storybook:publish": "npm run init && npm run build-storybook && cp CNAME storybook-static/ && touch ./storybook-static/.nojekyll",
     "release": "semantic-release"
   },
   "keywords": [],
