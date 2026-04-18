@@ -1,11 +1,9 @@
-## 方法名称
-
-fibonacci
+# fibonacci
 
 ## 函数声明
 
-```ts
-function fibonacci(n: number): number
+```typescript
+function fibonacci(n: number): number;
 ```
 
 ## 描述
@@ -14,22 +12,24 @@ function fibonacci(n: number): number
 
 ## 参数
 
-- `n: number` — 斐波那契序列中的位置，从 0 开始。必须为非负整数。
+| 参数名 | 类型     | 描述                              | 默认值 |
+| ------ | -------- | --------------------------------- | ------ |
+| `n`    | `number` | 斐波那契序列中的位置，从 0 开始   | —      |
 
 ## 返回值
 
-- `number` — 第 `n` 个斐波那契数。
+`number` — 第 `n` 个斐波那契数。
 
 ## 异常
 
-- 如果输入为负整数，将抛出 `Error`。
+如果输入为负整数，将抛出 `Error`。
 
 ## 使用示例
 
-```ts
-fibonacci(0); // 输出: 0
-fibonacci(1); // 输出: 1
-fibonacci(2); // 输出: 1
-fibonacci(5); // 输出: 5
-fibonacci(10); // 输出: 55
+```typescript
+fibonacci(0);   // 输出: 0
+fibonacci(1);   // 输出: 1
+fibonacci(2);   // 输出: 1
+fibonacci(5);   // 输出: 5
+fibonacci(10);  // 输出: 55
 ```
