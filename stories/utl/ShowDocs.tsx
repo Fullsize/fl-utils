@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Markdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { okaidia } from "react-syntax-highlighter/dist/esm/styles/prism";
 import "./index.css";
@@ -38,7 +39,7 @@ const ShowDocs = (props: any) => {
       .then((res) => res.text())
       .then((text) => setMarkdown(text));
   }, []);
-  return <Markdown>{markdown}</Markdown>;
+  return <Markdown remarkPlugins={[remarkGfm]}>{markdown}</Markdown>;
   return <>123</>;
 };
 
