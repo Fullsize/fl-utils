@@ -1,0 +1,5 @@
+import{R as e}from"./index-DAV8Sz2w.js";import{S as D}from"./ShowDocs-CqAhdaoT.js";import"./jsx-runtime-D01Q-bBI.js";function r(d,u,i){return Math.min(Math.max(d,u),i)}const p=()=>e.createElement("div",null,e.createElement("p",null,"clamp(5, 0, 10): ",r(5,0,10)),e.createElement("p",null,"clamp(-3, 0, 10): ",r(-3,0,10)),e.createElement("p",null,"clamp(15, 0, 10): ",r(15,0,10)),e.createElement("p",null,"clamp(50, 0, 100): ",r(50,0,100))),f={title:"math/clamp",component:p},a={render:()=>e.createElement(D,{md:"doc/clamp.md"})},m={render:()=>e.createElement(p,null)};var t,c,o;a.parameters={...a.parameters,docs:{...(t=a.parameters)==null?void 0:t.docs,source:{originalSource:`{
+  render: () => <ShowDocs md={"doc/clamp.md"} />
+}`,...(o=(c=a.parameters)==null?void 0:c.docs)==null?void 0:o.source}}};var n,l,s;m.parameters={...m.parameters,docs:{...(n=m.parameters)==null?void 0:n.docs,source:{originalSource:`{
+  render: () => <ClampDemo />
+}`,...(s=(l=m.parameters)==null?void 0:l.docs)==null?void 0:s.source}}};const x=["Doc","Demo"];export{m as Demo,a as Doc,x as __namedExportsOrder,f as default};

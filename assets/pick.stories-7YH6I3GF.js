@@ -1,0 +1,5 @@
+import{R as r}from"./index-DAV8Sz2w.js";import{S as f}from"./ShowDocs-CqAhdaoT.js";import"./jsx-runtime-D01Q-bBI.js";function k(e,t){const a={};for(const n of t)n in e&&(a[n]=e[n]);return a}const u=()=>{const e={name:"Alice",age:30,email:"alice@example.com",role:"admin"},t=k(e,["name","email"]);return r.createElement("div",null,r.createElement("p",null,"原始对象: ",JSON.stringify(e)),r.createElement("p",null,'pick(user, ["name", "email"]): ',JSON.stringify(t)))},g={title:"object/pick",component:u},o={render:()=>r.createElement(f,{md:"doc/pick.md"})},c={render:()=>r.createElement(u,null)};var s,m,i;o.parameters={...o.parameters,docs:{...(s=o.parameters)==null?void 0:s.docs,source:{originalSource:`{
+  render: () => <ShowDocs md={"doc/pick.md"} />
+}`,...(i=(m=o.parameters)==null?void 0:m.docs)==null?void 0:i.source}}};var l,p,d;c.parameters={...c.parameters,docs:{...(l=c.parameters)==null?void 0:l.docs,source:{originalSource:`{
+  render: () => <PickDemo />
+}`,...(d=(p=c.parameters)==null?void 0:p.docs)==null?void 0:d.source}}};const x=["Doc","Demo"];export{c as Demo,o as Doc,x as __namedExportsOrder,g as default};

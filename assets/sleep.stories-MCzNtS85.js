@@ -1,0 +1,5 @@
+import{R as e}from"./index-DAV8Sz2w.js";import{S as i}from"./ShowDocs-CqAhdaoT.js";import"./jsx-runtime-D01Q-bBI.js";function S(s){return new Promise(r=>setTimeout(r,s))}const p=()=>{const[s,r]=e.useState("等待中..."),u=async()=>{r("开始等待..."),await S(2e3),r("等待结束！")};return e.createElement("div",null,e.createElement("p",null,"状态: ",s),e.createElement("button",{onClick:u},"等待 2 秒"))},w={title:"async/sleep",component:p},t={render:()=>e.createElement(i,{md:"doc/sleep.md"})},o={render:()=>e.createElement(p,null)};var a,n,c;t.parameters={...t.parameters,docs:{...(a=t.parameters)==null?void 0:a.docs,source:{originalSource:`{
+  render: () => <ShowDocs md={"doc/sleep.md"} />
+}`,...(c=(n=t.parameters)==null?void 0:n.docs)==null?void 0:c.source}}};var m,l,d;o.parameters={...o.parameters,docs:{...(m=o.parameters)==null?void 0:m.docs,source:{originalSource:`{
+  render: () => <SleepDemo />
+}`,...(d=(l=o.parameters)==null?void 0:l.docs)==null?void 0:d.source}}};const h=["Doc","Demo"];export{o as Demo,t as Doc,h as __namedExportsOrder,w as default};

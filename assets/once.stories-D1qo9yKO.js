@@ -1,0 +1,5 @@
+import{R as e}from"./index-DAV8Sz2w.js";import{S as E}from"./ShowDocs-CqAhdaoT.js";import"./jsx-runtime-D01Q-bBI.js";function S(c){let t=!1,r;return function(...s){return t||(r=c.apply(this,s),t=!0),r}}const f=()=>{const[c,t]=e.useState(0),[r,s]=e.useState(0),D=e.useMemo(()=>S(()=>(s(a=>a+1),"已初始化")),[]);return e.createElement("div",null,e.createElement("p",null,"点击次数: ",c),e.createElement("p",null,"实际执行次数: ",r),e.createElement("button",{onClick:()=>{t(a=>a+1),D()}},"点击调用 once 函数"))},g={title:"function/once",component:f},o={render:()=>e.createElement(E,{md:"doc/once.md"})},n={render:()=>e.createElement(f,null)};var m,u,l;o.parameters={...o.parameters,docs:{...(m=o.parameters)==null?void 0:m.docs,source:{originalSource:`{
+  render: () => <ShowDocs md={"doc/once.md"} />
+}`,...(l=(u=o.parameters)==null?void 0:u.docs)==null?void 0:l.source}}};var d,i,p;n.parameters={...n.parameters,docs:{...(d=n.parameters)==null?void 0:d.docs,source:{originalSource:`{
+  render: () => <OnceDemo />
+}`,...(p=(i=n.parameters)==null?void 0:i.docs)==null?void 0:p.source}}};const w=["Doc","Demo"];export{n as Demo,o as Doc,w as __namedExportsOrder,g as default};

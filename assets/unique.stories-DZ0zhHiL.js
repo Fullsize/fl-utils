@@ -1,0 +1,5 @@
+import{R as e}from"./index-DAV8Sz2w.js";import{S as l}from"./ShowDocs-CqAhdaoT.js";import"./jsx-runtime-D01Q-bBI.js";function p(r){return Array.from(new Set(r))}const d=()=>{const r=[1,2,2,3,3,3,4,4,4,4],i=p(r);return e.createElement("div",null,e.createElement("p",null,"原始数组: ",JSON.stringify(r)),e.createElement("p",null,"去重后: ",JSON.stringify(i)))},q={title:"array/unique",component:d},o={render:()=>e.createElement(l,{md:"doc/unique.md"})},t={render:()=>e.createElement(d,null)};var n,a,s;o.parameters={...o.parameters,docs:{...(n=o.parameters)==null?void 0:n.docs,source:{originalSource:`{
+  render: () => <ShowDocs md={"doc/unique.md"} />
+}`,...(s=(a=o.parameters)==null?void 0:a.docs)==null?void 0:s.source}}};var c,m,u;t.parameters={...t.parameters,docs:{...(c=t.parameters)==null?void 0:c.docs,source:{originalSource:`{
+  render: () => <UniqueDemo />
+}`,...(u=(m=t.parameters)==null?void 0:m.docs)==null?void 0:u.source}}};const E=["Doc","Demo"];export{t as Demo,o as Doc,E as __namedExportsOrder,q as default};

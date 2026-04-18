@@ -1,0 +1,5 @@
+import{R as r}from"./index-DAV8Sz2w.js";import{S as f}from"./ShowDocs-CqAhdaoT.js";import"./jsx-runtime-D01Q-bBI.js";function D(e,c){const S=new Set(c),s={};for(const t in e)Object.prototype.hasOwnProperty.call(e,t)&&!S.has(t)&&(s[t]=e[t]);return s}const u=()=>{const e={name:"Alice",age:30,email:"alice@example.com",role:"admin"},c=D(e,["role"]);return r.createElement("div",null,r.createElement("p",null,"原始对象: ",JSON.stringify(e)),r.createElement("p",null,'omit(user, ["role"]): ',JSON.stringify(c)))},g={title:"object/omit",component:u},o={render:()=>r.createElement(f,{md:"doc/omit.md"})},n={render:()=>r.createElement(u,null)};var m,a,l;o.parameters={...o.parameters,docs:{...(m=o.parameters)==null?void 0:m.docs,source:{originalSource:`{
+  render: () => <ShowDocs md={"doc/omit.md"} />
+}`,...(l=(a=o.parameters)==null?void 0:a.docs)==null?void 0:l.source}}};var i,d,p;n.parameters={...n.parameters,docs:{...(i=n.parameters)==null?void 0:i.docs,source:{originalSource:`{
+  render: () => <OmitDemo />
+}`,...(p=(d=n.parameters)==null?void 0:d.docs)==null?void 0:p.source}}};const h=["Doc","Demo"];export{n as Demo,o as Doc,h as __namedExportsOrder,g as default};
