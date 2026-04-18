@@ -1,6 +1,4 @@
-## 方法名称
-
-asyncPool
+# asyncPool
 
 ## 函数声明
 
@@ -18,18 +16,19 @@ async function asyncPool(
 
 ## 参数
 
-- `poolLimit: number`：每次允许并发执行的最大异步任务数。
-- `iterable: any[]`：可迭代对象，包含要处理的任务或数据项的集合。
-- `iteratorFn: Function`：异步迭代函数，接受每个数据项作为参数并返回 Promise。用于对每个任务或数据项执行异步操作。
+| 参数名       | 类型         | 描述                                               | 默认值 |
+| ------------ | ------------ | -------------------------------------------------- | ------ |
+| `poolLimit`  | `number`     | 每次允许并发执行的最大异步任务数                   | —      |
+| `iterable`   | `any[]`      | 可迭代对象，包含要处理的任务或数据项的集合         | —      |
+| `iteratorFn` | `Function`   | 异步迭代函数，接受每个数据项作为参数并返回 Promise | —      |
 
 ## 返回值
 
-- `Promise<any[]>`:
-  返回包含所有任务结果的 `Promise`，当所有任务完成时，该 `Promise` 会被解析。
+`Promise<any[]>` — 返回包含所有任务结果的 Promise，当所有任务完成时，该 Promise 会被解析。
 
 ## 使用示例
 
-### 示例 1：控制并发请求数量
+### 控制并发请求数量
 
 ```typescript
 async function fetchData(url: string): Promise<string> {
@@ -52,17 +51,16 @@ run();
 // 同时最多执行 2 个请求，所有请求完成后输出结果
 ```
 
-### 示例 2：文件上传场景
+### 文件上传场景
 
 ```typescript
 async function uploadFile(file: File): Promise<string> {
-  // 模拟文件上传
   return new Promise((resolve) => {
     setTimeout(() => resolve(`${file.name} uploaded`), 1000);
   });
 }
 
-const files = [file1, file2, file3, file4, file5]; // 假设有 5 个文件需要上传
+const files = [file1, file2, file3, file4, file5];
 
 async function runUploads() {
   const results = await asyncPool(3, files, uploadFile);

@@ -1,10 +1,8 @@
-## 方法名称
-
-ceil
+# ceil
 
 ## 函数声明
 
-```ts
+```typescript
 function ceil(number: number, precision?: number): number;
 ```
 
@@ -21,23 +19,23 @@ function ceil(number: number, precision?: number): number;
 
 ## 返回值
 
-- 返回向上取整后的数值，保留指定的小数位数。
+`number` — 返回向上取整后的数值，保留指定的小数位数。
 
 ## 使用示例
 
-### 示例 1：默认精度
+### 默认精度
 
-```ts
-ceil(4.2); // 返回 5
-ceil(-4.2); // 返回 -4
+```typescript
+ceil(4.2);   // 返回 5
+ceil(-4.2);  // 返回 -4
 ```
 
-### 示例 2：指定精度
+### 指定精度
 
-```ts
-ceil(6.004, 2); // 返回 6.01
-ceil(123.0001, 3); // 返回 123.001
-ceil(-3.1415, 2); // 返回 -3.14
+```typescript
+ceil(6.004, 2);     // 返回 6.01
+ceil(123.0001, 3);  // 返回 123.001
+ceil(-3.1415, 2);   // 返回 -3.14
 ```
 
 ## 注意事项
