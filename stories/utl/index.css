@@ -24,6 +24,20 @@
   }
 }
 
+.dark {
+  :root {
+    --doc-bg: #1b1b1b;
+    --doc-text: #e0e0e0;
+    --doc-border: #444;
+    --doc-th-bg: #2a2a2a;
+    --doc-even-bg: #222;
+    --doc-hover-bg: #333;
+    --doc-pre-bg: #2a2a2a;
+    --doc-pre-border: #444;
+    --doc-code-color: #e0e0e0;
+  }
+}
+
 pre {
   background-color: var(--doc-pre-bg);
   border: 1px solid var(--doc-pre-border);
@@ -55,7 +69,8 @@ table {
   color: var(--doc-text);
 }
 
-th, td {
+th,
+td {
   border: 1px solid var(--doc-border);
   padding: 8px 12px;
   text-align: left;

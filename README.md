@@ -17,7 +17,10 @@ pnpm install @fullsize/utils
 | Function | Description | Docs |
 |----------|-------------|------|
 | `chuck` | Split array into smaller chunks | [chuck.md](public/doc/chuck.md) |
+| `flatten` | Flatten nested arrays | [flatten.md](public/doc/flatten.md) |
+| `groupBy` | Group array elements by key | [groupBy.md](public/doc/groupBy.md) |
 | `shuffle` | Randomly shuffle array elements | [shuffle.md](public/doc/shuffle.md) |
+| `unique` | Remove duplicate elements | [unique.md](public/doc/unique.md) |
 
 ### Type Guards
 
@@ -39,7 +42,9 @@ pnpm install @fullsize/utils
 |----------|-------------|------|
 | `add` | Addition with precision | [add.md](public/doc/add.md) |
 | `ceil` | Ceiling with precision | [ceil.md](public/doc/ceil.md) |
+| `clamp` | Clamp number between min and max | [clamp.md](public/doc/clamp.md) |
 | `fibonacci` | Calculate nth Fibonacci number | [fibonacci.md](public/doc/fibonacci.md) |
+| `random` | Generate random number in range | [random.md](public/doc/random.md) |
 
 ### Object Utilities
 
@@ -48,13 +53,19 @@ pnpm install @fullsize/utils
 | `deepClone` | Deep clone objects | [deepClone.md](public/doc/deepClone.md) |
 | `deepMerge` | Deep merge objects | [deepMerge.md](public/doc/deepMerge.md) |
 | `deconstruction` | Deconstruct and reassemble data | [deconstruction.md](public/doc/deconstruction.md) |
+| `get` | Safely get nested object property | [get.md](public/doc/get.md) |
+| `omit` | Omit specified properties from object | [omit.md](public/doc/omit.md) |
+| `pick` | Pick specified properties from object | [pick.md](public/doc/pick.md) |
 
 ### Function Utilities
 
 | Function | Description | Docs |
 |----------|-------------|------|
 | `curry` | Curry a function | [curry.md](public/doc/curry.md) |
+| `debounce` | Debounce function calls | [debounce.md](public/doc/debounce.md) |
 | `memo` | Memoize function results | [memo.md](public/doc/memo.md) |
+| `once` | Function that only executes once | [once.md](public/doc/once.md) |
+| `throttle` | Throttle function calls | [throttle.md](public/doc/throttle.md) |
 
 ### Async Utilities
 
@@ -62,6 +73,7 @@ pnpm install @fullsize/utils
 |----------|-------------|------|
 | `asyncPool` | Limit concurrent async tasks | [asyncPool.md](public/doc/asyncPool.md) |
 | `awaitTo` | Convert Promise to error/data tuple | [awaitTo.md](public/doc/awaitTo.md) |
+| `sleep` | Promise-based delay | [sleep.md](public/doc/sleep.md) |
 | `tryCatch` | Wrap sync/async with error handling | [tryCatch.md](public/doc/tryCatch.md) |
 
 ### URL Utilities
