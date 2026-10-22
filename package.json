@@ -33,7 +33,7 @@
   },
   "keywords": [],
   "author": "@fullsize",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "devDependencies": {
     "@chromatic-com/storybook": "^1.2.25",
     "@rollup/plugin-terser": "^0.4.4",

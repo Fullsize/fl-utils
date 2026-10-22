@@ -140,7 +140,9 @@ pnpm run build-storybook
 
 ## License
 
-UNLICENSED - Private package
+[MIT](LICENSE) © @fullsize
+
+允许商用、个人二次开发、修改、分发及闭源使用，无需公开修改后的源代码。分发本软件或其重要部分时，须保留原版权声明和 MIT 协议文本。本软件按“原样”提供，不提供任何担保。
 
 ## Repository
 
